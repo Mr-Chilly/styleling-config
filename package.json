@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "repository": "git+https://bitbucket.org/milesbram/slimmingworld.platform.stylelintconfig",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "stylelint ."
   },
-  "author": "",
-  "license": "ISC",
+  "author": "SlimmingWorld",
+  "license": "all rights reserved",
   "dependencies": {
     "stylelint": "^8.1.1",
     "stylelint-config-recommended": "^2.1.0",
