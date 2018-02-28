@@ -1,10 +1,9 @@
 "use strict"
 
 module.exports = {
-  "extends": "stylelint-config-recommended",
   "plugins": [
     "stylelint-declaration-use-variable",
-    "stylelint-scss"
+    "stylelint-scss",
   ],
   "rules": {
     "declaration-bang-space-before": "always",

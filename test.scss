@@ -6,3 +6,106 @@
 #dave2 {
   width: 3px
 }
+
+
+$buttonHeight: size(7);
+
+$primary: (
+  color: $colorPrimaryLight,
+  border: $colorBrand,
+  background: $colorBrand,
+  radius: $radiusButton,
+  borderHover: scale-color($colorBrand, $lightness: -10%),
+  backgroundHover: scale-color($colorBrand, $lightness: -10%),
+);
+
+$secondary: (
+  color: $colorPrimaryLight,
+  border: $colorMidTone,
+  background: $colorMidTone,
+  borderHover: $colorPrimaryDark,
+  backgroundHover: $colorPrimaryDark,
+  colorActive: $colorPrimaryLight,
+  borderActive: $colorBrand,
+  backgroundActive: $colorBrand,
+  radius: $radiusButton,
+);
+
+$tertiary: (
+  color: $colorPrimaryDark,
+  border: transparent,
+  background: transparent,
+  backgroundHover: transparent,
+  colorActive: $colorPrimaryLight,
+  borderActive: transparent,
+  radius: 0,
+);
+
+$ghostDark: (
+  color: $colorPrimaryDark,
+  border: $colorMidTone,
+  background: $colorTransparent,
+  borderHover: $colorPrimaryDark,
+  backgroundHover:$colorTransparent,
+  radius: $radiusButton,
+);
+
+$ghostLight: (
+  color: $colorPrimaryLight,
+  border: scale-color($colorPrimaryLight, $lightness: 10%),
+  background: $colorTransparent,
+  borderHover: $colorPrimaryLight,
+  backgroundHover:$colorTransparent,
+  radius: $radiusButton
+);
+
+$block: (
+  color: $colorPrimaryDark,
+  border: $colorMidTone,
+  background: $colorLightTone,
+  radius: rem-size(2)
+);
+
+$disabled: (
+  color: $colorPrimaryLight,
+  border: $colorPrimaryLight,
+  background: $colorInputBorder,
+  radius: $radiusButton,
+);
+
+@mixin button($type) {
+  @include style-formal;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: map-get($type, radius);
+  height: $buttonHeight;
+  color: map-get($type, color);
+  background: map-get($type, background);
+  border: rem-size(1) solid map-get($type, border);
+  padding: size(0 4);
+
+  .atom-icon {
+    display: flex;
+    margin-right: size(1);
+    color: map-get($type, color);
+  }
+
+  &:hover {
+    background: map-get($type, backgroundHover);
+    border-color: map-get($type, borderHover);
+  }
+
+  &:focus {
+    @include input-focus-state;
+  }
+
+  &:disabled,
+  &.is-disabled {
+    color: map-get($disabled, color);
+    background: map-get($disabled, background);
+    border: rem-size(1) solid map-get($disabled, border);
+    cursor: not-allowed;
+  }
+}
