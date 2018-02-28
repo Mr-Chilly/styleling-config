@@ -13,5 +13,8 @@
     "stylelint": "^8.1.1",
     "stylelint-declaration-use-variable": "^1.6.0",
     "stylelint-scss": "^2.0.1"
+  },
+  "devDependencies": {
+    "husky": "^0.13.3"
   }
 }
