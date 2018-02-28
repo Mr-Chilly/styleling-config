@@ -5,7 +5,8 @@
   "main": "index.js",
   "repository": "git+https://bitbucket.org/milesbram/slimmingworld.platform.stylelintconfig",
   "scripts": {
-    "lint": "stylelint ."
+    "lint": "stylelint .",
+    "commitmsg": "node ./hooks/commit-msg.js"
   },
   "author": "SlimmingWorld",
   "license": "all rights reserved",
@@ -15,6 +16,7 @@
     "stylelint-scss": "^2.0.1"
   },
   "devDependencies": {
+    "node-fetch": "^2.0.0",
     "husky": "^0.13.3"
   }
 }
