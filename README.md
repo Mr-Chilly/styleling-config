@@ -1,12 +1,12 @@
-# Stylelint.Config.SlimmingWorld
+# Stylelint.Config
 
-SlimmingWorld Global SCSS linting rules, this extends the basic stylelint rules for use with our global projects. 
+SCSS linting rules, this extends the basic stylelint rules for use with our global projects. 
 
 ---
 ## Installation
 
 ```
-yarn add https://bitbucket.org/milesbram/slimmingworld.platform.stylelintconfig#develop
+yarn add https://github.com/Mr-Chilly/styleling-config
 ```
  
 
@@ -15,7 +15,7 @@ yarn add https://bitbucket.org/milesbram/slimmingworld.platform.stylelintconfig#
 ## .stylelintrc
 ```
 {
-  "extends": "stylelint-config-slimmingworld"
+  "extends": "stylelint-config-chilly"
 }
 ```
 
